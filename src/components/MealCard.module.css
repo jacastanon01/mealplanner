@@ -1,0 +1,118 @@
+@media screen and (min-width: 492px) {
+}
+
+@media screen and (min-width: 320) and (max-width: 491) {
+  .card {
+    width: 80vw;
+    height: 100%;
+  }
+}
+
+.card {
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 150ms;
+  /* transform: perspective(1000px) rotateY(180deg) translateY(-2px); */
+}
+
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+}
+
+.front h2 {
+  /* flex: 1;
+  align-self: center; */
+  position: relative;
+  z-index: 5;
+  font-weight: 700;
+  cursor: pointer;
+  color: #eee;
+}
+
+.front img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.front.btn-group {
+  display: flex;
+  margin: 0.5em;
+}
+
+.front button {
+  cursor: pointer;
+  z-index: 1;
+  margin: auto;
+  padding: 0 1em;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  opacity: 0.7;
+  font-size: 1em;
+  font-weight: 600;
+  background: #a4cddd;
+  flex: 1;
+}
+
+.card .back {
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0 0.25em;
+}
+
+.back p {
+  padding: 0.5em;
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.flip {
+  transform: perspective(1000px) rotateY(180deg) translateY(-2px);
+  background: #a4cddd;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 100;
+  height: 40%;
+  width: 100%;
+  cursor: pointer;
+
+  /* background: linear-gradient(
+    0deg,
+    rgba(47, 47, 47, 0.4) 14%,
+    rgba(220, 220, 220, 0.4) 78%
+  ); */
+  /* background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.3) 14%,
+    rgba(166, 166, 166, 0.3) 78%
+  ); */
+  background: linear-gradient(
+    0deg,
+    rgba(77, 77, 77, 0.2) 14%,
+    rgba(191, 191, 191, 0.155) 78%
+  );
+  /* background: linear-gradient(
+    0deg,
+    rgba(125, 125, 125, 0.3) 14%,
+    rgba(255, 255, 255, 0.399) 78%
+  ); */
+}
