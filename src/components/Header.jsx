@@ -32,7 +32,7 @@ function Header() {
   return (
     <header>
       <h1 className="header-title">
-        What we eating this {allMeals[currentDay].day}?
+        What{`'`}s for dinner this {allMeals[currentDay].day}?
       </h1>
       <button className="add-btn" onClick={handleModal}>
         {/* {width > 700 ? "+ Add new meal" : "+"} */}+ Add new meal

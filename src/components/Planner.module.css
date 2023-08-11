@@ -14,10 +14,12 @@
 
   .meal {
     height: 100%;
+    margin: 1em 0;
   }
 
   .meal h1 {
-    margin-top: 2em;
+    margin: 1em;
+    font-size: 2.5em;
   }
 
   .meal__button {
@@ -41,6 +43,7 @@
     height: 100%;
     width: 100%;
     border-bottom: 1px dotted black;
+
     /* border-bottom-style: groove; */
   }
 
@@ -49,7 +52,7 @@
   }
 
   .meal {
-    margin: 0.5em;
+    margin-bottom: 2em;
     text-align: center;
   }
 
@@ -68,8 +71,8 @@
 .planner-container {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
   flex: 5;
+  gap: 1em;
 }
 
 .meal {
@@ -81,7 +84,7 @@
 
 .meal h1 {
   text-align: center;
-  margin-bottom: 2em;
+
   border-bottom-style: groove;
 }
 
@@ -101,7 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-radius: 5px;
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;

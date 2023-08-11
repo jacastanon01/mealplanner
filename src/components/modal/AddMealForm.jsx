@@ -7,6 +7,7 @@ import classes from "./Modal.module.css";
 import { RiAddCircleFill } from "react-icons/ri";
 import { useExtractMealDataMutation } from "../../slices/apiSlice";
 
+// TODO set up default values for selects with a custom hook and utils
 function AddMealForm() {
   const [mealUrl, setMealUrl] = useState("");
   const { currentDay } = useSelector(selectDay);

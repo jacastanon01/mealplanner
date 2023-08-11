@@ -6,25 +6,16 @@ import { useSelector } from "react-redux";
 import { selectMeals } from "./slices/mealsSlice";
 import { selectDay } from "./slices/currentDaySlice";
 import Header from "./components/Header";
-
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+import { days } from "./utils/constants";
 
 function App() {
   const allMeals = useSelector(selectMeals);
   const { currentDay } = useSelector(selectDay);
 
   return (
-    <>
+    <main style={{ margin: "0 0.5em" }}>
       <Header />
-      <main className="container">
+      <section className="container">
         <aside>
           <WeekList days={days} meals={allMeals} />
         </aside>
@@ -32,8 +23,8 @@ function App() {
         {/* <h1>{allMeals[currentDay].day}</h1> */}
         <Planner />
         {/* </section> */}
-      </main>
-    </>
+      </section>
+    </main>
   );
 }
 
