@@ -18,14 +18,10 @@ function MealCard({ mealData, handleDeleteMeal, mealTime }) {
         ></div>
         {mealData?.image && <img src={mealData?.image} alt="meal" />}
         <div className={classes["btn-group"]}>
-          <button
-            // className={classes}
-            onClick={() => window.open(mealData.sourceUrl, "_blank")}
-          >
+          <button onClick={() => window.open(mealData.sourceUrl, "_blank")}>
             Recipe
           </button>
           <button onClick={() => handleDeleteMeal(mealTime)}>Delete</button>
-          {/* <button onClick={() => setIsFront((f) => !f)}>Show recipe</button> */}
         </div>
       </div>
       <div className={classes.back} onClick={() => setIsFront((f) => !f)}>

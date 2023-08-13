@@ -2,29 +2,22 @@ import axios from "axios";
 import express from "express";
 import cors from "cors";
 import "dotenv/config.js";
+import path from "path";
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-// app.get("/api", async (req, res) => {
-//   console.log(req.params);
-//   try {
-//     console.log(req.body);
-//     const { data } = await axios.get(
-//       // eslint-disable-next-line no-undef
-//       `https://api.spoonacular.com/recipes/extract?apiKey=${process.env.API_KEY}&url=${mealUrl}`
-//     );
-//     //   console.log(req.body, req.params);
-//     res.json(data);
-//   } catch (err) {
-//     console.log(err);
-//   }
-// });
+if (process.env.NODE_ENV === "production") {
+  const __dirname = path.resolve();
+  console.log(__dirname);
+  app.use(express.static(path.join(__dirname, "dist")));
 
-let state = null;
-
+  app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "dist")));
+} else {
+  app.get("/", (req, res) => res.send("server is running"));
+}
 app.get("/api", async (req, res) => {
   try {
     const { mealUrl } = req.query;

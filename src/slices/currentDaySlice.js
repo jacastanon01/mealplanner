@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   currentDay: 0,
+  currentMeal: "",
 };
 
 export const currentDaySlice = createSlice({
@@ -11,11 +12,14 @@ export const currentDaySlice = createSlice({
     setCurrentDay(state, action) {
       state.currentDay = action.payload;
     },
+    setCurrentMeal(state, action) {
+      state.currentMeal = action.payload;
+    },
   },
 });
 
 export const selectDay = (state) => state.days;
 
-export const { setCurrentDay } = currentDaySlice.actions;
+export const { setCurrentDay, setCurrentMeal } = currentDaySlice.actions;
 
 export default currentDaySlice.reducer;

@@ -8,4 +8,4 @@ export const days = [
   "Saturday",
 ];
 
-export const mealsInDay = ["breakfast", "lunch", "dinner"];
+export const mealsInDay = ["Breakfast", "Lunch", "Dinner"];

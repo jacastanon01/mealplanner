@@ -1,20 +1,26 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addMeal } from "../../slices/mealsSlice";
-import { selectDay } from "../../slices/currentDaySlice";
+import {
+  selectDay,
+  setCurrentMeal,
+  setCurrentDay,
+} from "../../slices/currentDaySlice";
 import { closeModal } from "../../slices/modalSlice";
 import classes from "./Modal.module.css";
 import { RiAddCircleFill } from "react-icons/ri";
 import { useExtractMealDataMutation } from "../../slices/apiSlice";
+import { days, mealsInDay } from "../../utils/constants";
+import SelectDropdown from "../SelectDropdown";
 
-// TODO set up default values for selects with a custom hook and utils
 function AddMealForm() {
   const [mealUrl, setMealUrl] = useState("");
-  const { currentDay } = useSelector(selectDay);
+  const { currentDay, currentMeal } = useSelector(selectDay);
   const [selectedId, setSelectedId] = useState(currentDay);
-  const [mealTime, setMealTime] = useState("breakfast");
+  const [mealTime, setMealTime] = useState(currentMeal);
   const dispatch = useDispatch();
   const [getMealData, { isLoading }] = useExtractMealDataMutation();
+  console.log(currentMeal, "CURRENT MEAL", mealTime);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -29,8 +35,8 @@ function AddMealForm() {
 
     dispatch(
       addMeal({
-        selectedId: +selectedId,
-        mealTime,
+        selectedId: +currentDay,
+        mealTime: currentMeal.toLowerCase(),
         mealData: { ...data },
       })
     );
@@ -45,29 +51,16 @@ function AddMealForm() {
       ) : (
         <form onSubmit={handleSubmit} className={classes["add-meal-form"]}>
           <div className={classes["select-controls"]}>
-            <select
-              value={selectedId}
-              onChange={(e) => setSelectedId(e.target.value)}
-              name="day"
-              id="select-day"
-            >
-              <option value="">Choose a day</option>
-              <option value="0">Sunday</option>
-              <option value="1">Monday</option>
-              <option value="2">Tuesday</option>
-              <option value="3">Wednesday</option>
-              <option value="4">Thursday</option>
-              <option value="5">Friday</option>
-              <option value="6">Saturday</option>
-            </select>
-            <select
-              value={mealTime}
-              onChange={(e) => setMealTime(e.target.value)}
-            >
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
-            </select>
+            <SelectDropdown
+              options={days}
+              value={currentDay}
+              setValue={setCurrentDay}
+            />
+            <SelectDropdown
+              options={mealsInDay}
+              value={currentMeal}
+              setValue={setCurrentMeal}
+            />
           </div>
           <label htmlFor="meal-url">Link</label>
           <div className={classes["input-controls"]}>
@@ -78,13 +71,9 @@ function AddMealForm() {
               onChange={(e) => setMealUrl(e.target.value)}
               placeholder="https://www.budgetbytes.com/coconut-curry-chickpeas/"
             />
-            {/* <span> */}
             <button type="submit">
-              {/* <PlusCircleIcon /> <IoAddCircle /> */}
               <RiAddCircleFill />
             </button>
-
-            {/* </span> */}
           </div>
         </form>
       )}

@@ -24,7 +24,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  flex-flow: column wrap;
+  align-items: center;
 }
 
 .front h2 {
@@ -44,7 +44,10 @@
 }
 
 .btn-group {
-  margin: auto;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .front button {
@@ -59,7 +62,7 @@
   font-size: 1em;
   font-weight: 600;
   background: #a4cddd;
-  flex: 1;
+  width: 30%;
 }
 
 .card .back {
