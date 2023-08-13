@@ -34,7 +34,6 @@
   z-index: 5;
   font-weight: 700;
   cursor: pointer;
-  color: white;
 }
 
 .front img {
@@ -44,9 +43,8 @@
   object-fit: fill;
 }
 
-.front.btn-group {
-  display: flex;
-  margin: 0.5em;
+.btn-group {
+  margin: auto;
 }
 
 .front button {
@@ -91,7 +89,7 @@
 .overlay {
   position: absolute;
   z-index: 100;
-  height: 40%;
+  height: 30%;
   width: 100%;
   cursor: pointer;
 
@@ -107,14 +105,19 @@
     rgba(255, 255, 255, 0.3) 14%,
     rgba(166, 166, 166, 0.3) 78%
   ); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(77, 77, 77, 0.266) 14%,
     rgba(191, 191, 191, 0.277) 78%
-  );
+  ); */
   /* background: linear-gradient(
     0deg,
     rgba(125, 125, 125, 0.3) 14%,
     rgba(255, 255, 255, 0.399) 78%
   ); */
+  background: linear-gradient(
+    0deg,
+    rgba(66, 66, 66, 0.27) 14%,
+    rgba(255, 255, 255, 0.28) 78%
+  );
 }
