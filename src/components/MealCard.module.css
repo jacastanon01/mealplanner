@@ -34,6 +34,7 @@
   z-index: 5;
   font-weight: 700;
   cursor: pointer;
+  color: #000;
 }
 
 .front img {
@@ -96,28 +97,6 @@
   width: 100%;
   cursor: pointer;
 
-  /* TODO: figure out overlay */
-
-  /* background: linear-gradient(
-    0deg,
-    rgba(47, 47, 47, 0.4) 14%,
-    rgba(220, 220, 220, 0.4) 78%
-  ); */
-  /* background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.3) 14%,
-    rgba(166, 166, 166, 0.3) 78%
-  ); */
-  /* background: linear-gradient(
-    0deg,
-    rgba(77, 77, 77, 0.266) 14%,
-    rgba(191, 191, 191, 0.277) 78%
-  ); */
-  /* background: linear-gradient(
-    0deg,
-    rgba(125, 125, 125, 0.3) 14%,
-    rgba(255, 255, 255, 0.399) 78%
-  ); */
   background: linear-gradient(
     0deg,
     rgba(66, 66, 66, 0.27) 14%,

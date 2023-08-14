@@ -1,12 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const baseQuery =
-  process.env.NODE_ENV === "production" ? "" : "http://localhost:4000";
-console.log("!!!!!!!!!!!", baseQuery);
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://rtk-meal-planner.onrender.com/"
+    : "http://localhost:4000";
 
 export const apiSlice = createApi({
   reducerPath: "",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000" }),
+  baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getMealData: builder.query({
       query: (data) => ({
