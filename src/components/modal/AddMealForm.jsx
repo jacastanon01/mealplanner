@@ -45,7 +45,7 @@ function AddMealForm() {
 
   return (
     <div className={classes.modal}>
-      <h3>Add a meal for</h3>
+      <h3>Add new meal</h3>
       {isLoading ? (
         <p>Adding recipe to planner...</p>
       ) : (
@@ -62,7 +62,7 @@ function AddMealForm() {
               setValue={setCurrentMeal}
             />
           </div>
-          <label htmlFor="meal-url">Link</label>
+          <label htmlFor="meal-url">Paste url below</label>
           <div className={classes["input-controls"]}>
             <input
               type="url"

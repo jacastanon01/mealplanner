@@ -41,13 +41,9 @@
   min-width: 50%;
   z-index: 100;
   overflow: hidden;
-  object-fit: cover;
-  object-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #eee;
-  height: 50vh;
-  background: center/ cover no-repeat url("../../assets/veggie-bg.jpg");
+  height: 60vh;
+  background: top/ cover no-repeat url("../../assets/veggie-bg.jpg");
 }
 
 .modal h3 {
@@ -85,10 +81,7 @@
   padding: 0.5em 4em 0.5rem 0.5em;
   border-radius: 0.25em;
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
-}
-
-.add-meal-form select > option {
-  color: red;
+  font-weight: 600;
 }
 
 .input-controls {
@@ -124,4 +117,5 @@
   border: none;
   border-radius: 10px;
   position: absolute;
+  background: var(--primary);
 }

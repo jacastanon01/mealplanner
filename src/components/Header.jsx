@@ -34,7 +34,11 @@ function Header() {
   return (
     <header className={classes.header}>
       <h1>
-        What{`'`}s for <GiHotMeal /> this {allMeals[currentDay].day}?
+        What{`'`}s for <GiHotMeal /> this
+        <span style={{ color: "var(--primary)" }}>
+          {" "}
+          {allMeals[currentDay].day}?
+        </span>
       </h1>
       {/* <div className={classes.icon}>
         <GiHotMeal />

@@ -1,5 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const baseQuery =
+  process.env.NODE_ENV === "production" ? "" : "http://localhost:4000";
+console.log("!!!!!!!!!!!", baseQuery);
+
 export const apiSlice = createApi({
   reducerPath: "",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000" }),
