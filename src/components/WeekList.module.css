@@ -5,14 +5,16 @@
   .week-list {
     display: none;
   }
+  .dropdown {
+    position: sticky;
+    top: 0;
+  }
+
   .dropdown select {
     width: 100%;
     font-size: 1em;
     font-weight: 600;
-    padding: 0.5em 0.3em;
-  }
-  .dropdown select option {
-    background: blue;
+    padding: 0.6em;
   }
 }
 
@@ -44,6 +46,11 @@
   outline: 2px solid black;
   align-self: center;
   padding: 0 0.4em;
+  height: 50px;
+}
+
+.week-list li:focus {
+  background: #eee;
 }
 
 .day-btn {

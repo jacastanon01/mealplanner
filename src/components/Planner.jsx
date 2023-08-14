@@ -24,9 +24,8 @@ function Planner() {
   }
 
   function handleClick(mealTime) {
-    console.log(mealTime);
     dispatch(setCurrentMeal(mealTime));
-    dispatch(openModal({ day, mealTime }));
+    dispatch(openModal());
   }
 
   function onDeleteMeal(mealTime) {

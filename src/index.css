@@ -5,83 +5,15 @@
   --primary: #a4cddd;
 }
 
+body {
+  background: #333;
+  color: #eee;
+}
+
 button {
   background: var(--primary);
 }
 
-/* TODO Refactor into css modules and wrap in main element*/
-
-@media only screen and (min-width: 320px) and (max-width: 491px) {
-  .container {
-    flex-direction: column;
-    overflow-y: scroll;
-  }
-  .week-list {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .meals-container {
-    flex-direction: column;
-  }
-
-  .meal {
-    height: 100%;
-  }
-}
-
-@media screen and (min-width: 492px) {
-  .container {
-    gap: 2em;
-  }
-  .container aside {
-    flex: 1;
-  }
-  .week-list {
-    height: 100%;
-  }
-  .week-list li {
-    height: 100%;
-    width: 100%;
-    /* border-bottom-style: groove; */
-  }
-  .planner-container {
-    flex: 4;
-  }
-
-  .meals-container {
-    justify-content: space-evenly;
-  }
-
-  .meal {
-    flex: 1;
-    margin: 0.5em;
-    text-align: center;
-  }
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
-  flex-direction: column;
-  align-items: center;
-  margin: 1em;
-  /* border-bottom-style: groove; */
-}
-
-.header-title {
-}
-
-.add-btn {
-  padding: 0 0.5em;
-  cursor: pointer;
-  margin: 0.7rem 0;
-}
-
 .container {
-  display: grid;
-  height: 90vh;
   margin: 0 1em;
-  grid-template-rows: 2.5em 1fr;
 }

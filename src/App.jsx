@@ -16,9 +16,9 @@ function App() {
     <main style={{ margin: "0 0.5em" }}>
       <Header />
       <section className="container">
-        <aside>
+        <nav>
           <WeekList days={days} meals={allMeals} />
-        </aside>
+        </nav>
         {/* <section className="planner-container"> */}
         {/* <h1>{allMeals[currentDay].day}</h1> */}
         <Planner />

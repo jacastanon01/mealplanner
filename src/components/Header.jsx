@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import Modal from "./modal/Modal";
 import { selectDay } from "../slices/currentDaySlice";
 import WeekList from "./WeekList";
+import { GiHotMeal } from "react-icons/gi";
+import classes from "./Header.module.css";
 
 function Header() {
   const dispatch = useDispatch();
@@ -30,13 +32,16 @@ function Header() {
     return <Modal />;
   }
   return (
-    <header>
-      <h1 className="header-title">
-        What{`'`}s for dinner this {allMeals[currentDay].day}?
+    <header className={classes.header}>
+      <h1>
+        What{`'`}s for <GiHotMeal /> this {allMeals[currentDay].day}?
       </h1>
-      <button className="add-btn" onClick={handleModal}>
-        {/* {width > 700 ? "+ Add new meal" : "+"} */}+ Add new meal
-      </button>
+      {/* <div className={classes.icon}>
+        <GiHotMeal />
+      </div> */}
+      {/* <button className="add-btn" onClick={handleModal}>
+       + Add new meal
+      </button> */}
     </header>
   );
 }

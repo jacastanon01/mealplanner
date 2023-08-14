@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5em;
+  letter-spacing: 0.2em;
+  /* font-size: 3em;
+  font-weight: 700; */
+  /* border-bottom-style: groove; */
+}
+
+.header h1 {
+  text-align: center;
+}
+
+.header svg {
+  color: var(--primary);
+}
