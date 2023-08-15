@@ -13,13 +13,13 @@ import {
 import Planner from "./components/Planner.jsx";
 import { PersistGate } from "redux-persist/integration/react";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      <Route path="overview" element={<Planner />} />
-    </Route>
-  )
-);
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<App />}>
+//       <Route path="overview" element={<Planner />} />
+//     </Route>
+//   )
+// );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
