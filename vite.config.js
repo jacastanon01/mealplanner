@@ -6,22 +6,22 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    proxy: {
-      "/api": {
-        target: "http://localhost:4000",
-        configure: (proxy, opt) => {
-          proxy.on("error", (req, res, err) => {
-            console.error(err);
-          });
-          proxy.on("proxyReq", (req, res, err) => {
-            console.log("Request sent from ", req.url, req.method);
-          });
-          proxy.on("proxyRes", (req, res, err) => {
-            console.log("Recieved response from ", res.statusCode, req.url);
-          });
-        },
-      },
-    },
+    // proxy: {
+    //   "/api": {
+    //     target: "http://localhost:4000",
+    //     configure: (proxy, opt) => {
+    //       proxy.on("error", (req, res, err) => {
+    //         console.error(err);
+    //       });
+    //       proxy.on("proxyReq", (req, res, err) => {
+    //         console.log("Request sent from ", req.url, req.method);
+    //       });
+    //       proxy.on("proxyRes", (req, res, err) => {
+    //         console.log("Recieved response from ", res.statusCode, req.url);
+    //       });
+    //     },
+    //   },
+    // },
   },
   // },
   // esbuild: {
