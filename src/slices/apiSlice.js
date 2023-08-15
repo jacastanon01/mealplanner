@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://rtk-meal-planner.onrender.com/"
+    ? "https://rtk-meal-planner.onrender.com"
     : "http://localhost:4000";
 
 export const apiSlice = createApi({

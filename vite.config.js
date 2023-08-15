@@ -1,9 +1,21 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
+import Inspect from "vite-plugin-inspect";
+import compression from "vite-plugin-compression2";
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    Inspect({ build: true, outputDir: ".vite-inspect" }),
+    // compression({
+    //   algorithm: "gzip",
+    //   exclude: [/\.(br)$ /, /\.(gz)$/],
+    // }),
+    // compression({
+    //   algorithm: "brotliCompress",
+    //   exclude: [/\.(br)$ /, /\.(gz)$/],
+    // }),
+  ],
   server: {
     port: 3000,
     // proxy: {
@@ -31,11 +43,11 @@ export default defineConfig({
   // global: "window",
   // },
   // },
-  // optimizeDeps: {
-  //   include: ["src/**/*.js", "src/*.jsx"],
-  //   esbuildOptions: {
-  //     bundle: "./server.js",
-  //   },
-  // },
+  optimizeDeps: {
+    include: ["src/**/*.js", "src/*.jsx"],
+    esbuildOptions: {
+      bundle: "./server.js",
+    },
+  },
   build: { minify: true, brotliSize: true },
 });
