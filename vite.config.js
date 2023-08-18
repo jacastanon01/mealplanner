@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     Inspect({ build: true, outputDir: ".vite-inspect" }),
-    // compression({
-    //   algorithm: "gzip",
-    //   exclude: [/\.(br)$ /, /\.(gz)$/],
-    // }),
+    compression({
+      algorithm: "gzip",
+      exclude: [/\.(br)$ /, /\.(gz)$/],
+    }),
     // compression({
     //   algorithm: "brotliCompress",
     //   exclude: [/\.(br)$ /, /\.(gz)$/],
@@ -37,11 +37,11 @@ export default defineConfig({
   },
   // },
   // esbuild: {
-  // include: ["src/**/*.js", "src/*.jsx"],
-  // exclude: [/\.jsx$/],
-  // define: {
-  // global: "window",
-  // },
+  //   include: ["src/**/*.js", "src/*.jsx"],
+  //   exclude: [/\.jsx$/],
+  //   define: {
+  //     global: "window",
+  //   },
   // },
   optimizeDeps: {
     include: ["src/**/*.js", "src/*.jsx"],
