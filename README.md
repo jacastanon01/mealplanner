@@ -17,6 +17,10 @@ This was built as a weekend project to learn more about state management using R
 - Node / Express
 - Axios
 
+<img width="1428" alt="Screenshot 2023-08-23 at 1 05 59 AM" src="https://github.com/jacastanon01/mealplanner/assets/24418510/717a8ad2-2eed-4764-a269-403f05dce0de">
+<img width="527" alt="Screenshot 2023-08-23 at 1 08 08 AM" src="https://github.com/jacastanon01/mealplanner/assets/24418510/63d56d63-9556-4edd-9e4c-a9189cf38ede">
+
+
 ## What I learned
 
 I tried to approach this project using Redux best practices. Fortunately Mark Erikson (creator of RTK) has written extensively of how to utilize this library. RTK takes care of a lot of the boiler plate to set up a redux store and simplifies the process of using and updating state with hooks. I enjoyed how organized you can make your state by abstracting different states into slices with their own logic to handle that area (reducers).
