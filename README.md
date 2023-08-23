@@ -19,8 +19,5 @@ This was built as a weekend project to learn more about state management using R
 
 <img width="1428" alt="Screenshot 2023-08-23 at 1 05 59 AM" src="https://github.com/jacastanon01/mealplanner/assets/24418510/717a8ad2-2eed-4764-a269-403f05dce0de">
 <img width="527" alt="Screenshot 2023-08-23 at 1 08 08 AM" src="https://github.com/jacastanon01/mealplanner/assets/24418510/63d56d63-9556-4edd-9e4c-a9189cf38ede">
-
-
-## What I learned
-
-I tried to approach this project using Redux best practices. Fortunately Mark Erikson (creator of RTK) has written extensively of how to utilize this library. RTK takes care of a lot of the boiler plate to set up a redux store and simplifies the process of using and updating state with hooks. I enjoyed how organized you can make your state by abstracting different states into slices with their own logic to handle that area (reducers).
+<img width="1436" alt="Screenshot 2023-08-23 at 3 04 11 PM" src="https://github.com/jacastanon01/mealplanner/assets/24418510/e85eea82-8fa8-47a2-8fda-30054ea43d9f">
+<img width="1440" alt="Screenshot 2023-08-23 at 3 03 43 PM" src="https://github.com/jacastanon01/mealplanner/assets/24418510/d237e6ce-b8d2-4b3a-91f4-8d43e7d52f57">
