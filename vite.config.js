@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import Inspect from "vite-plugin-inspect";
-import compression from "vite-plugin-compression2";
+// import Inspect from "vite-plugin-inspect";
+// import compression from "vite-plugin-compression2";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    Inspect({ build: true, outputDir: ".vite-inspect" }),
+    // Inspect({ build: true, outputDir: ".vite-inspect" }),
     // compression({
     //   algorithm: "gzip",
     //   exclude: [/\.(br)$ /, /\.(gz)$/],
@@ -44,10 +44,7 @@ export default defineConfig({
   //   },
   // },
   optimizeDeps: {
-    include: ["src/**/*.js", "src/*.jsx", "dist/assets/index.html"],
-    esbuildOptions: {
-      bundle: "./server.js",
-    },
+    include: ["src/**/*.js", "src/*.jsx", "dist/index.html"],
   },
   build: { minify: true, brotliSize: true },
 });

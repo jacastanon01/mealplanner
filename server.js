@@ -3,11 +3,13 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config.js";
 import path from "path";
+import compression from "compression";
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+app.use(compression());
 
 if (process.env.NODE_ENV === "production") {
   const __dirname = path.resolve();
