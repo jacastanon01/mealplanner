@@ -30,7 +30,6 @@ app.get("/api", async (req, res) => {
     );
     console.log(title, summary);
     res.json({ title, image, sourceUrl, summary, instructions });
-    // res.send("H");
   } catch (error) {
     console.log(error);
   }
@@ -41,11 +40,9 @@ app.post("/api", async (req, res) => {
     const { mealUrl } = req.body;
     const {
       data,
-      //   : { title, image, sourceUrl, summary, instructions },
     } = await axios.get(
       `https://api.spoonacular.com/recipes/extract?apiKey=${process.env.API_KEY}&url=${mealUrl}`
     );
-    // console.log(title, summary);
     res.json({ data });
   } catch (error) {
     console.log(error);

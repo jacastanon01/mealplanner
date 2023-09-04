@@ -12,8 +12,6 @@ export const apiSlice = createApi({
     getMealData: builder.query({
       query: (data) => ({
         url: `/api?mealUrl=${data.mealUrl}`,
-        // url: "/api",
-        // body: data,
       }),
     }),
     extractMealData: builder.mutation({

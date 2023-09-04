@@ -25,7 +25,6 @@ function MealCard({ mealData, handleDeleteMeal, mealTime }) {
         </div>
       </div>
       <div className={classes.back} onClick={() => setIsFront((f) => !f)}>
-        {/* <p>{mealData?.summary}</p> */}
         <p
           dangerouslySetInnerHTML={{
             __html: mealData?.summary || mealData?.instructions,

@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectDay, setCurrentMeal } from "../slices/currentDaySlice";
 import { selectMeals, removeMeal } from "../slices/mealsSlice";
@@ -9,10 +8,9 @@ import classes from "./Planner.module.css";
 import { mealsInDay } from "../utils/constants";
 
 function Planner() {
-  const { currentDay, currentMeal } = useSelector(selectDay);
+  const { currentDay } = useSelector(selectDay);
   const allMeals = useSelector(selectMeals);
-  const { day, mealsList } = allMeals[currentDay];
-  const [{ breakfast }, { lunch }, { dinner }] = mealsList;
+  const { mealsList } = allMeals[currentDay];
   const dispatch = useDispatch();
 
   function isEmpty(mealObj, mealProp) {

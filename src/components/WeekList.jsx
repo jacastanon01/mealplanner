@@ -1,4 +1,3 @@
-import React from "react";
 import { selectDay, setCurrentDay } from "../slices/currentDaySlice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectMeals } from "../slices/mealsSlice";

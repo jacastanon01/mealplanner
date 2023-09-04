@@ -1,5 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
   {
@@ -109,99 +108,6 @@ const initialState = [
   },
 ];
 
-const initState = {
-  breakfast: [
-    {
-      id: 0,
-      meal: "",
-    },
-    {
-      id: 1,
-      meal: "",
-    },
-    {
-      id: 2,
-      meal: "",
-    },
-    {
-      id: 3,
-      meal: "",
-    },
-    {
-      id: 4,
-      meal: "",
-    },
-    {
-      id: 5,
-      meal: "",
-    },
-    {
-      id: 6,
-      meal: "",
-    },
-  ],
-  lunch: [
-    {
-      id: 0,
-      meal: "",
-    },
-    {
-      id: 1,
-      meal: "",
-    },
-    {
-      id: 2,
-      meal: "",
-    },
-    {
-      id: 3,
-      meal: "",
-    },
-    {
-      id: 4,
-      meal: "",
-    },
-    {
-      id: 5,
-      meal: "",
-    },
-    {
-      id: 6,
-      meal: "",
-    },
-  ],
-  dinner: [
-    {
-      id: 0,
-      meal: "",
-    },
-    {
-      id: 1,
-      meal: "",
-    },
-    {
-      id: 2,
-      meal: "",
-    },
-    {
-      id: 3,
-      meal: "",
-    },
-    {
-      id: 4,
-      meal: "",
-    },
-    {
-      id: 5,
-      meal: "",
-    },
-    {
-      id: 6,
-      meal: "",
-    },
-  ],
-};
-
 export const mealsSlice = createSlice({
   name: "meals",
   initialState,
@@ -241,14 +147,6 @@ export const mealsSlice = createSlice({
     },
   },
 });
-
-// const fetchMealData = createAsyncThunk(
-//   "meals/fetchMealData",
-//   async (mealUrl) => {
-//     const res = await axios.get(`http://localhost:4000/api?mealUrl=${mealUrl}`);
-//     return res.json();
-//   }
-// );
 
 export const selectMeals = (state) => state.meals;
 
